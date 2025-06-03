@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"              # Où se trouve ton package.json
+    schedule:
+      interval: "weekly"        # options: "daily", "weekly", "monthly"
+    # optionally:
+    # open-pull-requests-limit: 5
+    # allow:
+    #   - dependency-type: "direct"

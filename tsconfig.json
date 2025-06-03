@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Basics */
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ES2019", "DOM"],
+
+    /* Strict best practices */
+    "strict": true, // equivalent to enabling all the strict flags below
+    // "noImplicitAny": true, // disallows implicit `any` types
+    "strictNullChecks": true, // enforces checks for `null` and `undefined`
+    "noUncheckedIndexedAccess": true, // makes array/object access safer (returns `T | undefined`)
+    "noImplicitThis": true, // disallows use of untyped `this`
+    "alwaysStrict": true, // emits "use strict" and enforces strict mode
+    "strictFunctionTypes": true, // checks function signature compatibility
+    "strictBindCallApply": true, // checks bind/call/apply method usage
+
+    /* Resolution and compatibility */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Declarations and output (for tsup or tsc build) */
+    "declaration": true,
+    "outDir": "dist",
+
+    /* Automatic types for Node.js and Vitest */
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["src", "tests"],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

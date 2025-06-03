@@ -1,0 +1,6 @@
+{
+  "ignoreFile": ".repo2promptignore",
+  "preamble": "preamble.prompt.txt",
+  "output": "prompt.txt",
+  "showProgress": true
+}

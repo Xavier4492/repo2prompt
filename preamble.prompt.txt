@@ -1,0 +1,21 @@
+The following is a snapshot of a Git repository, rendered as a plain‐text “dump” for use by a language model. It is structured in three parts:
+
+1. **Table of Contents:**
+   A numbered list of every file included, in the order they appear below.
+
+2. **File Sections:**
+   Each file is prefixed by
+
+   ```
+   ----[N]
+   <relative/path/to/file>
+   ```
+
+   where `N` is the file’s index (matching the ToC). After that line comes the file’s contents (or, if it’s binary or too large, a brief metadata/truncation marker).
+
+3. **End Marker:**
+   A final line containing `--END--` indicates the end of the repository snapshot. Any text that follows should be treated as instructions or queries about this repository.
+
+Use this entire dump as context when answering questions. For example, you can reference specific files by their ToC number or path, inspect code snippets, identify configuration values, and so on.
+
+---

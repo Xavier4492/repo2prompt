@@ -1,0 +1,97 @@
+{
+  "name": "repo2prompt",
+  "version": "1.0.0",
+  "description": "Transforms a deposit into a structured text file for LLM.",
+  "keywords": [
+    "LLM",
+    "chatgpt",
+    "gpt",
+    "openai",
+    "dump",
+    "repository",
+    "text",
+    "cli",
+    "repo2promptignore"
+  ],
+  "homepage": "https://github.com/Xavier4492/repo2prompt#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xavier4492/repo2prompt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Xavier4492/repo2prompt/issues"
+  },
+  "author": "Xavier4492 <xavierloue@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "bin": {
+    "repo2prompt": "./dist/cli.cjs"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint \"src/**/*.{ts,js}\" \"tests/**/*.{ts,js}\"",
+    "prepare": "npm run build && npm run type-check && npm run lint",
+    "type-check": "tsc --noEmit",
+    "test": "npm run build && vitest",
+    "test:ci": "vitest --run --coverage",
+    "docs:api": "typedoc",
+    "release": "semantic-release",
+    "prompt": "node dist/cli.cjs"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.2",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/cli-progress": "^3.11.6",
+    "@types/estree": "^1.0.7",
+    "@types/json-schema": "^7.0.15",
+    "@types/node": "^22.15.29",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "@vitest/coverage-istanbul": "^3.2.0",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.4",
+    "tsup": "^8.5.0",
+    "typedoc": "^0.28.4",
+    "typedoc-plugin-markdown": "^4.6.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "commander": "^14.0.0",
+    "glob": "^11.0.2"
+  }
+}

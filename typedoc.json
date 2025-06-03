@@ -1,0 +1,10 @@
+{
+    "entryPoints": ["src/index.ts"],
+    "out": "docs/api",
+    "plugin": ["typedoc-plugin-markdown"],
+    "excludePrivate": true,
+    "excludeExternals": true,
+    "gitRemote": "origin",
+    "gitRevision": "main"
+}
+  
