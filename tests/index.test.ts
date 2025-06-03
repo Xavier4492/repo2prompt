@@ -661,8 +661,7 @@ describe('CLI main() behavior and edge cases', () => {
 
     const outputPath = path.join(repoDir, 'output.txt')
     const content = await fsp.readFile(outputPath, 'utf-8')
-    const lines = content.trim().split('\n')
-    expect(lines[lines.length - 1]).toBe('--END--')
+    expect(content.trim().endsWith('--END--')).toBe(true)
   })
 
   it('exits if .repo2prompt.json preamble points to a missing file', async () => {

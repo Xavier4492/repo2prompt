@@ -31,15 +31,17 @@
 
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
-import path from 'node:path'
 import os from 'node:os'
+import path, { dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
 import { Command } from 'commander'
 import { SingleBar, Presets } from 'cli-progress'
 
 // Resolve current file path and directory for relative operations
 // __dirname: directory of the executed script (CJS or CLI).
-const __dirname = path.dirname(process.argv[1] || '')
+// const __dirname = path.dirname(process.argv[1] || '')
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 // Configuration interface describing possible user-specified options
 export interface Repo2PromptConfig {
