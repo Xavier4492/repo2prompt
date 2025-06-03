@@ -2,11 +2,10 @@
 
 <!-- TODO: add all command option overwritable by the CLI, `.repo2prompt.json`, `package.json` field, and default values. -->
 <!-- TODO: add support for, `.repo2prompt.js/cjs/ts`, `package.json` field, and default values. -->
-<!-- -->
-[![CI](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/ci.yml)
-[![Coverage Status](https://img.shields.io/endpoint?url=https://gist.github.com/Xavier4492/repo2prompt-coverage-badge)](https://github.com/Xavier4492/repo2prompt/actions/workflows/ci.yml)
-[![Release](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/release.yml/badge.svg)](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/release.yml)
-[![npm version](https://img.shields.io/npm/v/spur-monocle-manager.svg)](https://www.npmjs.com/package/spur-monocle-manager)
+
+[![CI](https://github.com/Xavier4492/repo2prompt/actions/workflows/ci.yml/badge.svg)](https://github.com/Xavier4492/repo2prompt/actions/workflows/ci.yml)
+[![Release](https://github.com/Xavier4492/repo2prompt/actions/workflows/release.yml/badge.svg)](https://github.com/Xavier4492/repo2prompt/actions/workflows/release.yml)
+[![npm version](https://img.shields.io/npm/v/repo2prompt.svg)](https://www.npmjs.com/package/repo2prompt)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Transform a Git repository into a structured text file, ready to be ingested by an LLM.
