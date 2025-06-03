@@ -2,6 +2,12 @@
 
 All notable changes...
 
+## [1.0.3](https://github.com/Xavier4492/repo2prompt/compare/v1.0.2...v1.0.3) (2025-06-03)
+
+### Bug Fixes
+
+* resolve path issues by updating directory reference for module compatibility ([6408d0f](https://github.com/Xavier4492/repo2prompt/commit/6408d0f69ae4704443c3b791bf17bbf83fe63f11))
+
 ## [1.0.2](https://github.com/Xavier4492/repo2prompt/compare/v1.0.1...v1.0.2) (2025-06-03)
 
 ### Bug Fixes
