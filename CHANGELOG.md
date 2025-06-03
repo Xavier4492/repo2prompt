@@ -2,6 +2,8 @@
 
 All notable changes...
 
+## [1.0.4](https://github.com/Xavier4492/repo2prompt/compare/v1.0.3...v1.0.4) (2025-06-03)
+
 ## [1.0.3](https://github.com/Xavier4492/repo2prompt/compare/v1.0.2...v1.0.3) (2025-06-03)
 
 ### Bug Fixes
