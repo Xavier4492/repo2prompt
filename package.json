@@ -83,8 +83,8 @@
     "vitest": "^3.2.0"
   },
   "engines": {
-    "node": ">=16",
-    "npm": ">=6"
+    "node": "20 || >=22", 
+    "npm": "9.8.1"
   },
   "publishConfig": {
     "access": "public"
