@@ -2,7 +2,7 @@
 
 <!-- TODO: add all command option overwritable by the CLI, `.repo2prompt.json`, `package.json` field, and default values. -->
 <!-- TODO: add support for, `.repo2prompt.js/cjs/ts`, `package.json` field, and default values. -->
-
+<!-- -->
 [![CI](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/ci.yml/badge.svg)](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/ci.yml)
 [![Coverage Status](https://img.shields.io/endpoint?url=https://gist.github.com/Xavier4492/repo2prompt-coverage-badge)](https://github.com/Xavier4492/repo2prompt/actions/workflows/ci.yml)
 [![Release](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/release.yml/badge.svg)](https://github.com/Xavier4492/spur-monocle-manager/actions/workflows/release.yml)
