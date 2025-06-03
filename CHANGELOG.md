@@ -2,6 +2,12 @@
 
 All notable changes...
 
+## [1.0.2](https://github.com/Xavier4492/repo2prompt/compare/v1.0.1...v1.0.2) (2025-06-03)
+
+### Bug Fixes
+
+* update path resolution and improve test assertion for CLI output ([07c2434](https://github.com/Xavier4492/repo2prompt/commit/07c2434fc3a67aa094a63bd73f701ab0ce2c9bc9))
+
 ## [1.0.1](https://github.com/Xavier4492/repo2prompt/compare/v1.0.0...v1.0.1) (2025-06-03)
 
 ### Bug Fixes
