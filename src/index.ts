@@ -32,16 +32,15 @@
 import fs from 'node:fs'
 import fsp from 'node:fs/promises'
 import os from 'node:os'
-import path, { dirname } from 'node:path'
+import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
 import { Command } from 'commander'
 import { SingleBar, Presets } from 'cli-progress'
 
-// Resolve current file path and directory for relative operations
-// __dirname: directory of the executed script (CJS or CLI).
-// const __dirname = path.dirname(process.argv[1] || '')
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const codeDir =
+  // @ts-expect-error: __dirname may not be defined in all module systems, fallback logic required
+  typeof __dirname !== 'undefined' ? __dirname : _dirname(fileURLToPath(import.meta.url))
 
 // Configuration interface describing possible user-specified options
 export interface Repo2PromptConfig {
@@ -312,7 +311,7 @@ export async function writeFilesWithIndex(
  * collects non-ignored files, and writes the aggregated output file.
  */
 export async function main(): Promise<void> {
-  const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf-8'))
+  const pkg = JSON.parse(fs.readFileSync(path.resolve(codeDir, '../package.json'), 'utf-8'))
   if (!pkg || !pkg.version) {
     console.error('Error: Unable to read package version.')
     process.exit(1)
@@ -386,13 +385,13 @@ export async function main(): Promise<void> {
   let ignoreFilePath = path.join(repoRoot, ignoreFileName)
   if (os.platform() === 'win32') ignoreFilePath = ignoreFilePath.replace(/\//g, '\\')
 
-  if (!(await fileExists(ignoreFilePath))) {
-    const fallback = path.join(__dirname, ignoreFileName)
-    if (await fileExists(fallback)) {
-      ignoreFilePath = fallback
-      if (debugMode) console.log(`[DEBUG] Fallback ignore found: ${fallback}`)
-    }
-  }
+  // if (!(await fileExists(ignoreFilePath))) {
+  //   const fallback = path.join(codeDir, ignoreFileName)
+  //   if (await fileExists(fallback)) {
+  //     ignoreFilePath = fallback
+  //     if (debugMode) console.log(`[DEBUG] Fallback ignore found: ${fallback}`)
+  //   }
+  // }
 
   // Read ignore patterns if the file exists
   let ignorePatterns: string[] = []
